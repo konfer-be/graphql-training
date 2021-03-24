@@ -48,7 +48,6 @@ const root2 = {
         return [1,2,3]
     },
     rollDice: (idx) => {
-        console.log('idx', idx);
         return [1,2,3].find(v => v === idx.idx)
     }
 };
@@ -67,9 +66,7 @@ const schema3 = buildSchema(`
 
 const root3 = {
     single: (args) => {
-        return users.find(u=>u.id===args.args);
-        return users[2];
-        return { id: users.find(u=>u.id===args.args).id }
+        return users.find(u => u.id === args.args);
     },
     multiple: () => {
         return users;
@@ -97,16 +94,17 @@ const schema4 = buildSchema(`
 
 const root4 = {
     single: (args) => {
-        return fakeDatabase.find(u=>u.id===args.args);
+        return fakeDatabase.find(u => u.id === args.args);
     },
-    getUser: ({id}) => {
-        return fakeDatabase[0];
+    getUser: ({ id }) => {
+        console.log('id', id);
+        return fakeDatabase.find(u => u.id == id);
     },
-    createUser: ( {input} ) => {
-        fakeDatabase.push(user);
+    createUser: ({ input }) => {
+        fakeDatabase.push(input);
         return fakeDatabase.slice().shift();
     },
-    updateUser: ( {id, input} ) => {
+    updateUser: ({ id, input }) => {
         fakeDatabase[id].name = name;
         return fakeDatabase[id];
     }
