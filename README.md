@@ -2,10 +2,6 @@
 
 Practical examples around GraphQL in Node.js environment.
 
-## > For who ?
-
-Developers who want to learn about graphql and tools in a node.js environment.
-
 ## > Practical cases
 
 - [GraphQL basics](./01-graphql-basics/)
