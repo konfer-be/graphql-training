@@ -11,10 +11,6 @@ Practical examples around GraphQL in Node.js environment.
 
 ## > Resources
 
-Resources are contextualized in each chapter. Here a serie of other links which can be interesting.
-
-### Official
-
 - [GraphQL](https://graphql.org/)
 
 ### GraphQL clients
