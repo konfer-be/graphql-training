@@ -17,5 +17,3 @@
 - [apollo-server](https://www.npmjs.com/package/apollo-server)
 - [typeorm](https://www.npmjs.com/package/typeorm)
 - [sqlite3](https://www.npmjs.com/package/sqlite3)
-
-## > See also
